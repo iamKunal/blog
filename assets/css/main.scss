@@ -1,0 +1,75 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes";
+.masthead{
+	background: black;
+	background-image: url("/assets/images/back.gif") !important;
+	background-repeat: no-repeat;
+	background-size : 200px;
+}
+#site-nav{
+	background: rgba(0, 0, 0, 0) !important;
+}
+#site-nav a{
+	color: #bdbdbd;
+}
+#site-nav a:hover{
+	color: white;
+}
+.site-title{
+	font-size: larger;
+	font-family: monospace;
+}
+#adverisement{
+	color: grey;
+	font-size: small;
+	padding-top: 5px;
+	border-top: grey 1px solid;
+}
+img{
+	padding:5px;
+	border: grey 1px solid;
+}
+img#teaser-image{
+	height: 300px;
+	margin-top:-15px;
+	box-shadow: 4px 4px 5px #888888;
+	max-width: 975px;
+}
+form.gsc-search-box{
+	display:none;
+}
+.gsc-control-cse.gsc-control-cse-en{
+	border:0px;
+	padding:0px;
+}
+input.custom-search{
+	width:30%;
+	margin-bottom:-5em;
+	font-size:smaller;
+	height:90%;
+	padding:10px;
+	margin: auto;
+	margin-right:0px;
+}
+li.custom-search a{
+	padding: 0.5rem 15px 0.5rem 15px;
+	margin: 0;
+	margin-left: 15px;
+}
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+:-moz-placeholder {
+   font-style: italic;  
+}
+::-moz-placeholder {
+   font-style: italic;  
+}
+:-ms-input-placeholder {  
+   font-style: italic; 
+}
