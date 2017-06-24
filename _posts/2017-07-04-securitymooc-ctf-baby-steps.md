@@ -8,7 +8,7 @@ tags:
   - securitymooc
 excerpt: ""
 ---
-Here's the [file link](/assets/write-ups/securitymoocctf/baby-steps).
+Here's the [file link](/assets/write-ups/securitymoocctf/baby_steps).
 
 This is a very simple gdb exercise given to us.
 
