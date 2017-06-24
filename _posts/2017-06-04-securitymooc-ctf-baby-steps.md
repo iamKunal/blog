@@ -19,7 +19,7 @@ me :)
 ```
 Let's run the file:
 
-```bash
+```console
 $ ./baby_steps
 Enter the password: Hello
 Wrong password!!
@@ -104,9 +104,10 @@ Dump of assembler code for function main:
 {% endhighlight %}
 Unfortunately, doing a quick `x/s 0x8048762` tells us that the program opens `/dev/urandom/` so our input is compared to random bytes.
 
-Since we have the file locally (no server side), we can just simply issue a `goto 0x08048671` in `gdb` after running the program and setting a breakpoint at `0x0804866f <+164>:	jne    0x80486a3`, ie, our comparison jump.
+Since we have the file locally (no server side), we can just simply issue a `goto 0x08048671` in `gdb` after running the program and setting a breakpoint at `0x0804866f <+164>:	jne    0x80486a3` (our comparison jump).
 
-That leads to printing our flag:
+That subsequently leads to printing our flag:
 
-`flag{kH9h9skyxrgSZeN3oaqGnNo4amNJvhOa}`
-
+```liquid
+flag{kH9h9skyxrgSZeN3oaqGnNo4amNJvhOa}
+```
