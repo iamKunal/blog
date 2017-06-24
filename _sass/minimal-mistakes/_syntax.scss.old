@@ -57,12 +57,7 @@ figure.highlight {
     margin: 0;
   }
 }
-td.gutter.gl{
-	background-color: gray;
-}
-figure.highlight{
-	background-color : black;
-}
+
 .highlight pre { width: 100%; }
 
 /*

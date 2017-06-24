@@ -21,7 +21,7 @@
 	color: white;
 }
 .site-title{
-	font-size: larger;
+	font-size: -webkit-xxx-large;
 	font-family: monospace;
 }
 #adverisement{
@@ -35,7 +35,7 @@ img{
 	border: grey 1px solid;
 }
 img#teaser-image{
-	height: 300px;
+	max-height: 300px;
 	margin-top:-15px;
 	box-shadow: 4px 4px 5px #888888;
 	max-width: 900px;
