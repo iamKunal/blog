@@ -8,6 +8,7 @@
 # Site Settings
 locale                   : "en"
 title                    : "Smashing the Stack"
+tagline                  : "Take away a beer from a pack of zero beers, you'll get 65535 beers."
 title_separator          : "|"
 name                     : "Kunal Gupta"
 description              : "A computer security blog."
