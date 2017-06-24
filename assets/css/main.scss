@@ -7,9 +7,16 @@
 @import "minimal-mistakes";
 .masthead{
 	background: black;
-	background-image: url("/assets/images/back.gif") !important;
+}
+@font-face {
+    font-family: LucidaConsole;
+    src: url("/assets/fonts/LucidaConsole.ttf");
+}
+.masthead__inner-wrap{
+	background: black;
+	background-image: url("/assets/images/back.png");
 	background-repeat: no-repeat;
-	background-size : 200px;
+	background-size : 340px;
 }
 #site-nav{
 	background: rgba(0, 0, 0, 0) !important;
@@ -22,7 +29,7 @@
 }
 .site-title{
 	font-size: -webkit-xxx-large;
-	font-family: monospace;
+	font-family: LucidaConsole;
 }
 a.site-tagline{
 	margin: 0 0 0 0;
@@ -30,6 +37,9 @@ a.site-tagline{
 	padding: 0 0 0 0;
 	font-style: italic;
 	font-size: medium;
+}
+.masthead__inner-wrap.site-tag{
+	background-image:none;
 }
 #adverisement{
 	color: grey;
@@ -79,4 +89,67 @@ li.custom-search a{
 }
 :-ms-input-placeholder {  
    font-style: italic; 
+}
+
+#mock-cursor {
+  color: white;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+  animation: blink 1s infinite;
+  margin-left: 0.45em;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+.cursor{
+    all: unset;
+    padding-bottom: 0px;
+    margin-bottom: -0.2em;
+    height: 1.5em;
+    margin-left: 0.5em;
 }
