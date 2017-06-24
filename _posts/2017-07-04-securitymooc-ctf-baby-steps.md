@@ -7,6 +7,7 @@ header:
 tags:
   - securitymooc
 excerpt: ""
+date: 2017-07-04 00:00:01 
 ---
 Here's the [file link](/assets/write-ups/securitymoocctf/baby_steps).
 
