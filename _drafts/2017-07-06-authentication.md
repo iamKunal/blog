@@ -3,42 +3,50 @@ title: "[SecurityMoocCTF] Authentication (100 points)"
 categories:
   - Write-ups
 header:
-  teaser: "https://i.imgur.com/bqFcAiS.png"
+  teaser: "https://i.imgur.com/ptHkEPe.png"
 tags:
   - securitymooc
 excerpt: ""
 ---
 Here's the [file link](/assets/write-ups/securitymoocctf/auth).
 
-This is a very simple gdb exercise given to us.
-
 ```
-I have lost my password, entering which to the program I will be able to enter a bank
-account which has billion dollars. I assure you million dollars if you get the key for
-me :) 
+IB HeadQuarter has received a binary from it's agent, supposed to be containing a key
+which will allow them to take control of enemy country nuke facility. See if you can find
+something userful. Here is the binary file. Use nc 52.7.95.224 8050 to connect to server.
 ```
-Let's run the file (I created a `flag.txt` with content `{ABCDEFGHIJKLMNOPQRSTUVWXYZ}`):
+Let's run the file with ltrace (I created a `flag.txt` with content `flag{ABCDEFGHIJKLMNOPQRSTUVWXYZ}`):
 
 ```console
 $ ltrace ./auth
-__libc_start_main(0x804867b, 1, 0xffd99034, 0x8048880 <unfinished ...>
-setbuf(0xf76f0d60, 0)                            = <void>
-fopen("flag.txt", "r")                           = 0x839a008
-__isoc99_fscanf(0x839a008, 0x8048925, 0xffd98e2c, 0xf7698702) = 1
+__libc_start_main(0x804867b, 1, 0xffa86b54, 0x8048880 <unfinished ...>
+setbuf(0xf7787d60, 0)                            = <void>
+fopen("flag.txt", "r")                           = 0x91de008
+__isoc99_fscanf(0x91de008, 0x8048925, 0xffa8694c, 0xf772f702) = 1
 puts("Enter the flag\n"Enter the flag
 
 )                         = 16
-__isoc99_scanf(0x8048925, 0xffd98e54, 0xffd98e2c, 0xf7698702Heyllo
+__isoc99_scanf(0x8048925, 0xffa86974, 0xffa8694c, 0xf772f702heyy
 ) = 1
-snprintf("Heyllo", 247, "Heyllo")                = 6
-strcmp("Heyllo", "{ABCDEFGHIJKLMNOPQRSTUVWXYZ}") = -1
-snprintf(" which is incorrect!!\n", 241, " which is incorrect!!\n") = 22
-puts("You said Heyllo which is incorre"...You said Heyllo which is incorrect!!
+snprintf("heyy", 247, "heyy")                    = 4
+strcmp("heyy", "flag{ABCDEFGHIJKLMNOPQRSTUVWXYZ}"...) = 1
+snprintf(" which is incorrect!!\n", 243, " which is incorrect!!\n") = 22
+puts("You said heyy which is incorrect"...You said heyy which is incorrect!!
 
-)      = 38
+)      = 36
 +++ exited (status 0) +++
+
 ```
-The binary asks for a password and after our input, prints that it's wrong.
+
+The calls are:
+1. An `fopen("flag.txt","r")` and reading the flag from that file.
+2. `scanf()` call for our input.
+3. `snprintf()` to a string using our input (without any `%s`).
+4. Using `puts()` on the final string.
+
+The [dissassembly](/assets/write-ups/securitymoocctf/auth.asm) tells us the same.
+
+Since `printf()` and `snprintf()` work on the same principle, we can try printing out the stack and see whether we can 
 Let's disassemble `main()` and see what we can infer:
 {% highlight nasm%}
 gdb-peda $ pdisas main
