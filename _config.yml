@@ -9,7 +9,7 @@
 locale                   : "en"
 title                    : "StackPwn.in"
 tagline                  : "Take away a beer from a pack of zero beers, you'll get 65535 beers."
-title_separator          : "-"
+title_separator          : " # "
 name                     : "Kunal Gupta"
 description              : "A computer security blog."
 url                      : "https://blog.stackpwn.in" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"

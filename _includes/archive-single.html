@@ -34,6 +34,8 @@
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+    {% if include.type != "grid" %}
     {% if post.header.teaser %}<img src="{{post.header.teaser}}" id="teaser-image">{% endif %}
+    {% endif %}
   </article>
 </div>
