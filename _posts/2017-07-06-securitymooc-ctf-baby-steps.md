@@ -1,5 +1,6 @@
 ---
 title: "[SecurityMoocCTF] Baby-Steps (50 points)"
+date: 2017-07-06 00:00:01 +0530
 categories:
   - Write-ups
 header:
@@ -8,6 +9,8 @@ tags:
   - securitymooc
 excerpt: ""
 ---
+> This was part of a CTF conducted as an exercise during the [SecurityMooc](https://www.securitymooc.in) course organised by IIT Kanpur.
+
 Here's the [file link](/assets/write-ups/securitymoocctf/baby_steps).
 
 This is a very simple gdb exercise given to us.

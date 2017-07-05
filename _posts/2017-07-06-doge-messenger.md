@@ -1,5 +1,6 @@
 ---
 title: "[SecurityMoocCTF] Doge Messenger (200 points)"
+date: 2017-07-06 00:00:06 +0530
 categories:
   - Write-ups
 header:
