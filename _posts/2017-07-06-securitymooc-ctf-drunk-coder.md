@@ -1,5 +1,5 @@
 ---
-title: "[SecurityMoocCTF] Drunk Coder (100 points)"
+title: "Drunk Coder (100 points) [Security Mooc CTF]"
 date: 2017-07-06 00:00:04 +0530
 categories:
   - Write-ups

@@ -14,7 +14,7 @@
               {% assign domain = site.url | append: site.baseurl %}
             {% endif %}
             {% if link.url contains 'javascript:' %}
-              <input type="text" class="custom-search" autocomplete="off" placeholder="Search..." spellcheck="false"><li class="masthead__menu-item custom-search" ><a href="{{ domain }}{{ link.url }}"> {{ link.title }} </a></li>
+              <input type="text" class="custom-search" autocomplete="off" placeholder="Search..." spellcheck="false"><li class="masthead__menu-item custom-search" ><a href="{{ domain }}{{ link.url }}"> <img src="/assets/images/search.png" style="all: initial;"></a></li>
             {% else %}
               <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
             {% endif %}

@@ -1,5 +1,5 @@
 ---
-title: "[SecurityMoocCTF] Baby-Steps (50 points)"
+title: "Baby-Steps (50 points) [Security Mooc CTF]"
 date: 2017-07-06 00:00:01 +0530
 categories:
   - Write-ups
