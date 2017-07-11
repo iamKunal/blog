@@ -4,7 +4,7 @@ layout: archive
 permalink: /posts/
 ---
 
-Hello! Here you can see all the blog posts I've added so far in reverse chronological order.
+Here you can see all the blog posts I've added so far in reverse chronological order.
 <h3 class="archive__subtitle"></h3>
 
 {% for post in site.posts %}
