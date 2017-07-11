@@ -55,7 +55,6 @@ img#teaser-image{
 	max-height: 300px;
 	margin-top:-15px;
 	box-shadow: 4px 4px 5px #888888;
-	max-width: 900px;
 }
 form.gsc-search-box{
 	display:none;
@@ -152,4 +151,7 @@ li.custom-search a{
     margin-bottom: -0.2em;
     height: 1.5em;
     margin-left: 0.5em;
+}
+.list__item{
+	padding-right:0px !important;
 }

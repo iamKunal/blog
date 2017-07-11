@@ -14,6 +14,7 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
+      <a href="{{ post.url | absolute_url }}" rel="permalink">
         <img src=
           {% if teaser contains "://" %}
             "{{ teaser }}"
@@ -21,6 +22,7 @@
             "{{ teaser | absolute_url }}"
           {% endif %}
           alt="">
+      </a>
       </div>
     {% endif %}
     <h2 class="archive__item-title" itemprop="headline">
@@ -35,7 +37,10 @@
     {% endif %}
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
     {% if include.type != "grid" %}
-    {% if post.header.teaser %}<img src="{{post.header.teaser}}" id="teaser-image">{% endif %}
+    {% if post.header.teaser %}
+    <a href="{{ post.url | absolute_url }}" rel="permalink">
+    <img src="{{post.header.teaser}}" id="teaser-image">{% endif %}
+    </a>
     {% endif %}
   </article>
 </div>

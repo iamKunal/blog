@@ -6,7 +6,7 @@ categories:
 header:
   teaser: "https://i.imgur.com/bqFcAiS.png"
 tags:
-  - securitymooc
+  - SecurityMooc
 excerpt: ""
 ---
 > This was part of a CTF conducted as an exercise during the [SecurityMooc](https://www.securitymooc.in) course organised by IIT Kanpur.

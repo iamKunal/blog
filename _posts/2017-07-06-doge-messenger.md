@@ -6,7 +6,7 @@ categories:
 header:
   teaser: "https://i.imgur.com/oucceD8.png"
 tags:
-  - securitymooc
+  - SecurityMooc
 excerpt: ""
 ---
 Here's the [file link](/assets/write-ups/securitymoocctf/doge).

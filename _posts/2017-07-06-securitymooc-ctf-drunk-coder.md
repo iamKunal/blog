@@ -6,7 +6,7 @@ categories:
 header:
   teaser: "https://i.imgur.com/jDYN8Iw.png"
 tags:
-  - securitymooc
+  - SecurityMooc
 excerpt: ""
 ---
 Here's the [file link](/assets/write-ups/securitymoocctf/drunk_coder).

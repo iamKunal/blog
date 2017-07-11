@@ -4,6 +4,8 @@ layout: archive
 permalink: /categories/
 ---
 
+Here are all the blog posts grouped by their respective categories.
+
 {% include group-by-array collection=site.posts field="categories" %}
 
 {% for category in group_names %}
