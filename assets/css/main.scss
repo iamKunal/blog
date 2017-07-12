@@ -155,3 +155,24 @@ li.custom-search a{
 .list__item{
 	padding-right:0px !important;
 }
+input.g-recaptcha{
+    color: white;
+    background-color: rgb(73, 78, 82);
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 10px;
+    float:right;
+}
+label {
+    display:flex;
+}
+#required{
+    padding-left: 5px;
+    float:left;
+    color: orangered;
+    font-size: 0.75rem;
+}
+#gform{
+	padding-right:250px;
+}
