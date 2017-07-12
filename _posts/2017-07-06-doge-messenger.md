@@ -7,7 +7,7 @@ header:
   teaser: "https://i.imgur.com/oucceD8.png"
 tags:
   - SecurityMooc
-excerpt: ""
+excerpt: "Write-up for Doge Messenger, a problem in CTF conducted as a part of IIT Kanpur's Security Mooc"
 ---
 Here's the [file link](/assets/write-ups/securitymoocctf/doge).
 Here's the [C Source](/assets/write-ups/securitymoocctf/doge.c).

@@ -7,7 +7,7 @@ header:
   teaser: "https://i.imgur.com/jDYN8Iw.png"
 tags:
   - SecurityMooc
-excerpt: ""
+excerpt: "Write-up for Drunk Coder, a problem in CTF conducted as a part of IIT Kanpur's Security Mooc"
 ---
 Here's the [file link](/assets/write-ups/securitymoocctf/drunk_coder).
 

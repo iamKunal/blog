@@ -7,7 +7,7 @@ header:
   teaser: "https://i.imgur.com/bqFcAiS.png"
 tags:
   - SecurityMooc
-excerpt: ""
+excerpt: "Write-up for Baby-Steps, a problem in CTF conducted as a part of IIT Kanpur's Security Mooc"
 ---
 > This was part of a CTF conducted as an exercise during the [SecurityMooc](https://www.securitymooc.in) course organised by IIT Kanpur.
 
