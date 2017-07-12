@@ -79,7 +79,7 @@ $(document).ready(function(){
       var checkExist = setInterval(function() {
         if ($('#PopupSignupForm_0').length) { //Check for Content to Load
             $('.mc-modal-bg').onclick(function(){
-            	$('.mcc-closeModal').click();
+            	$('.mc-closeModal').click();
             });
         }
     }, 500);
