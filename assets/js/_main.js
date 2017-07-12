@@ -32,7 +32,7 @@ $(document).ready(function(){
   });
 
   // init smooth scroll
-  $("a").smoothScroll({offset: -20});
+//  $("a").smoothScroll({offset: -20});
 
   // add lightbox class to all image links
   $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
@@ -76,6 +76,14 @@ $(document).ready(function(){
   
   asciitext="                                          Hey visitor! Welcome to \n\n\n\n  █████████   █████                       █████      ███████████                                 ███              ██\n ███°°°°°███ °°███                       °°███      °°███°°°°°███                               °°°              ███\n°███    °°°  ███████    ██████    ██████  °███ █████ °███    °███ █████ ███ █████ ████████      ████  ████████  °°° \n°°█████████ °°°███°    °°°°°███  ███°°███ °███°°███  °██████████ °°███ °███°°███ °°███°°███    °°███ °°███°°███     \n °°°°°°°°███  °███      ███████ °███ °°°  °██████°   °███°°°°°°   °███ °███ °███  °███ °███     °███  °███ °███     \n ███    °███  °███ ███ ███°°███ °███  ███ °███°°███  °███         °°███████████   °███ °███     °███  °███ °███     \n°°█████████   °°█████ °°████████°°██████  ████ █████ █████         °°████°████    ████ █████ ██ █████ ████ █████    \n °°°°°°°°°     °°°°°   °°°°°°°°  °°°°°°  °°°° °°°°° °°°°°           °°°° °°°°    °°°° °°°°° °° °°°°° °°°° °°°°°     \n \n\n            ";
   console.log(asciitext);
+      var checkExist = setInterval(function() {
+        if ($('#PopupSignupForm_0').length) { //Check for Content to Load
+            $('#PopupSignupForm_0')[0].onclick=function(){
+                $('#PopupSignupForm_0')[0].style="display:none;";
+            }
+
+        }
+    }, 500);
   
 });
 function myCallback() {
