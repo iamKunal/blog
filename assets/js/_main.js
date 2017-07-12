@@ -78,7 +78,9 @@ $(document).ready(function(){
   console.log(asciitext);
       var checkExist = setInterval(function() {
         if ($('#PopupSignupForm_0').length) { //Check for Content to Load
-            $('.mc-modal-bg').attr('data-action','close-mc-modal');
+            $('.mc-modal-bg').onclick(function(){
+            	$('.mcc-closeModal').click();
+            });
         }
     }, 500);
   
