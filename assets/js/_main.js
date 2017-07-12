@@ -78,10 +78,7 @@ $(document).ready(function(){
   console.log(asciitext);
       var checkExist = setInterval(function() {
         if ($('#PopupSignupForm_0').length) { //Check for Content to Load
-            $('#PopupSignupForm_0')[0].onclick=function(){
-                $('#PopupSignupForm_0')[0].style="display:none;";
-            }
-
+            $('.mc-modal-bg').attr('data-action','close-mc-modal');
         }
     }, 500);
   
