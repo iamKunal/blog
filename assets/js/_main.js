@@ -78,7 +78,7 @@ $(document).ready(function(){
   console.log(asciitext);
       var checkExist = setInterval(function() {
         if ($('#PopupSignupForm_0').length) { //Check for Content to Load
-            $('.mc-modal-bg').onclick(function(){
+            $('.mc-modal-bg')[0].onclick=(function(){
             	$('.mc-closeModal').click();
             });
         }
