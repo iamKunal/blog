@@ -9,8 +9,12 @@ permalink: /contact/
 <script type="text/javascript">
 var checkExist = setInterval(function() {
 	if ($('#gform').length) { //Check for Content to Load
+		$('.contact-submit').onclick=function(){
+			$('.contact-submit').attr('disabled','');
+		}
 		if(submitted==true){
 				document.cookie = 'MCPopupClosed' + '=; Path=/;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+				$('.contact-submit').attr('disabled','');
 				$('#gform').fadeOut(2000);
 				setTimeout(function(){
 					$('#submitted').hide();
@@ -41,7 +45,7 @@ var checkExist = setInterval(function() {
 
 
 <div id="submitted"></div>
-<form name="gform" id="gform" enctype="text/plain" target="hidden_iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSexijxBZwH0GUh3rDTTTH6DuP_4J_9TGXsdowQM_vPImvjuDA/formResponse?" onsubmit="submitted=true;">
+<form name="gform" id="gform" enctype="text/plain" target="hidden_iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSexijxBZwH0GUh3rDTTTH6DuP_4J_9TGXsdowQM_vPImvjuDA/formResponse?" onsubmit="submitted=true;$('.contact-submit').attr('disabled','');">
   <label for="entry.17070818">Your Name: <div id="required"> *</div></label><br>
   <input type="text" name="entry.17070818" required placeholder="Enter your name..."><br>
   <label for="entry.1519113853">Your Email: <div id="required"> *</div></label><br>
