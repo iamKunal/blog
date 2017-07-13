@@ -15,6 +15,7 @@ var checkExist = setInterval(function() {
 				setTimeout(function(){
 					$('#submitted').hide();
 					$('#submitted').prepend('Thanks for contacting me! I\'ll get back to you soon :)');
+					$('#submitted').fadeIn(3000);
 				}, 2000);
 				
 	    	submitted=false;
