@@ -1,6 +1,7 @@
 ---
 title: "Contact"
-layout: archive
+layout: single
+share : false
 permalink: /contact/
 ---
 <hr>
