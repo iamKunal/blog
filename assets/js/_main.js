@@ -76,13 +76,13 @@ $(document).ready(function(){
   
   asciitext="                                          Hey visitor! Welcome to \n\n\n\n  █████████   █████                       █████      ███████████                                 ███              ██\n ███°°°°°███ °°███                       °°███      °°███°°°°°███                               °°°              ███\n°███    °°°  ███████    ██████    ██████  °███ █████ °███    °███ █████ ███ █████ ████████      ████  ████████  °°° \n°°█████████ °°°███°    °°°°°███  ███°°███ °███°°███  °██████████ °°███ °███°°███ °°███°°███    °°███ °°███°°███     \n °°°°°°°°███  °███      ███████ °███ °°°  °██████°   °███°°°°°°   °███ °███ °███  °███ °███     °███  °███ °███     \n ███    °███  °███ ███ ███°°███ °███  ███ °███°°███  °███         °°███████████   °███ °███     °███  °███ °███     \n°°█████████   °°█████ °°████████°°██████  ████ █████ █████         °°████°████    ████ █████ ██ █████ ████ █████    \n °°°°°°°°°     °°°°°   °°°°°°°°  °°°°°°  °°°° °°°°° °°°°°           °°°° °°°°    °°°° °°°°° °° °°°°° °°°° °°°°°     \n \n\n            ";
   console.log(asciitext);
-      var checkExist = setInterval(function() {
-        if ($('#PopupSignupForm_0').length) { //Check for Content to Load
-            $('.mc-modal-bg')[0].onclick=(function(){
-            	$('.mc-closeModal').click();
-            });
-        }
-    }, 500);
+//      var checkExist = setInterval(function() {
+//        if ($('#PopupSignupForm_0').length) { //Check for Content to Load
+//            $('.mc-modal-bg')[0].onclick=(function(){
+//            	$('.mc-closeModal').click();
+//            });
+//        }
+//    }, 500);
   
 });
 function myCallback() {
