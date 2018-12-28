@@ -12,6 +12,11 @@
     font-family: LucidaConsole;
     src: url("/assets/fonts/LucidaConsole.ttf");
 }
+
+body {
+  zoom: 90%;
+}
+
 .masthead__inner-wrap{
 	background: black;
 	background-image: url("/assets/images/back.png");
