@@ -10,7 +10,7 @@ tags:
   - ROP
 excerpt: "Writeup for ret2win, problems in the ROP Emporium Problem Set"
 ---
-Here's the [problem link]("https://ropemporium.com/challenge/ret2win.html").  
+Here's the [problem link](https://ropemporium.com/challenge/ret2win.html).  
 Here are the provided binaries:
 [32bit](/assets/write-ups/ropemporium/ret2win/ret2win32), [64bit](/assets/write-ups/ropemporium/ret2win/ret2win)
 
