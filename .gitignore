@@ -1,12 +1,9 @@
-*.gem
-*.sublime-project
-*.sublime-workspace
-.bundle
-.DS_Store
-.jekyll-metadata
-.sass-cache
-_asset_bundler_cache
 _site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+_asset_bundler_cache
 codekit-config.json
 example/_site
 Gemfile.lock
@@ -16,3 +13,5 @@ test/
 docs/
 blog
 jsgen
+
+*.bak

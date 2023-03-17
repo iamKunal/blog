@@ -1,11 +1,13 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
+search: false
 ---
 
 @charset "utf-8";
 
-@import "minimal-mistakes";
-//@import "{{ site.theme }}";
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
 .masthead{
 	background: black;
 }
@@ -18,11 +20,8 @@ body {
   zoom: 90%;
 }
 
-.masthead__inner-wrap{
-	background: black;
-	background-image: url("/assets/images/back.png");
-	background-repeat: no-repeat;
-	background-size : 340px;
+.masthead__inner-wrap {
+  padding: 0.5em;
 }
 #site-nav{
 	background: rgba(0, 0, 0, 0) !important;
@@ -33,19 +32,53 @@ body {
 #site-nav a:hover{
 	color: white;
 }
+.site-title::before {
+  content: "";
+  background-size: 8em !important;
+  background: url("/assets/images/back-cropped.png") no-repeat;
+  height: 0.6em;
+  display: block;
+}
 .site-title{
 	font-size: 1.75em;
-	font-family: LucidaConsole;
+  font-family: LucidaConsole, monospace;
 }
-a.site-tagline{
-	margin: 0 0 0 0;
+.site-subtitle{
+	//margin: 0 0 0 0;
 	margin-right: 2rem;
 	padding: 0 0 0 0;
 	font-style: italic;
-	font-size: medium;
+	font-size: 0.5em;
+  font-weight: normal;
+  gap: 2px;
+  display: block;
+  font-family: sans-serif;;
 }
-.masthead__inner-wrap.site-tag{
-	background-image:none;
+
+.site-subtitle::after {
+  content: "";
+  width: 0.2em;
+  height: 1.5em;
+  margin-bottom: - 0.3em;
+  background: white;
+  color: white;
+  display: inline-block;
+  animation: cursor-blink 1.5s normal infinite ease-in-out;
+  margin-left: 0.25em;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 #adverisement{
 	color: grey;
@@ -59,100 +92,6 @@ img#teaser-image{
 	max-width:99%;
 	padding: 5px;
 	border: grey 1px solid;
-}
-form.gsc-search-box{
-	display:none;
-}
-.gsc-control-cse.gsc-control-cse-en{
-	border:0px;
-	padding:0px;
-}
-input.custom-search{
-	width:30%;
-	font-size:smaller;
-	height:90%;
-	padding:10px;
-	margin-right:0px;
-}
-li.custom-search a{
-	padding: 0.5rem 15px 0.5rem 15px;
-	margin: 0;
-	margin-left: 15px;
-}
-::-webkit-input-placeholder {
-   font-style: italic;
-}
-:-moz-placeholder {
-   font-style: italic;  
-}
-::-moz-placeholder {
-   font-style: italic;  
-}
-:-ms-input-placeholder {  
-   font-style: italic; 
-}
-
-#mock-cursor {
-  color: white;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
-  animation: blink 1s infinite;
-  margin-left: 0.45em;
-}
-
-@keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
-}
-
-@-moz-keyframes blink {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
-}
-
-@-webkit-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
-}
-
-@-ms-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
-}
-
-@-o-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
-}
-.cursor{
-    all: unset;
-    padding-bottom: 0px;
-    margin-bottom: -0.2em;
-    height: 1.5em;
-    margin-left: 0.5em;
 }
 .list__item{
 	padding-right:0px !important;

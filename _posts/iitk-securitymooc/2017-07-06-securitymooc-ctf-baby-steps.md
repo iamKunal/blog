@@ -38,7 +38,7 @@ Wrong password!!+++ exited (status 0) +++
 ```
 The binary asks for a password and after our input, prints that it's wrong.
 Let's disassemble `main()` and see what we can infer (`key` is correct password, `input` is our input):
-{% highlight nasm%}
+```nasm
 gdb-peda $ pdisas main
 Dump of assembler code for function main:
    0x080485cb <+0>:	lea    ecx,[esp+0x4]
@@ -87,7 +87,7 @@ Dump of assembler code for function main:
                  ..........
    0x080486d0 <+261>:	ret    
 End of assembler dump.
-{% endhighlight %}
+```
 
 The program opens `/dev/urandom` and writes random bytes into they `key`.
 

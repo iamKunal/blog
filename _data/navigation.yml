@@ -2,8 +2,8 @@
 main:
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "&#x1f50d;"
-    url: javascript:search();
+#  - title: "&#x1f50d;"
+#    url: javascript:search();
   - title: "About"
     url: /about/
   - title: "Blog"

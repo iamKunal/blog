@@ -43,7 +43,7 @@ puts("Sorry Password in file is wrong"Sorry Password in file is wrong
 The binary asks for number of bytes to read and then we are asked for an input after a brief `sleep()`.
 
 Let's observe the disassembly and understand the `ltrace` calls.
-{% highlight nasm%}
+```nasm
 $ pdisas main
 Dump of assembler code for function main:
    0x0804865b <+0>:	lea    ecx,[esp+0x4]
@@ -98,7 +98,7 @@ Dump of assembler code for function main:
                  ..........
    0x08048802 <+423>:	ret    
 End of assembler dump.
-{% endhighlight %}
+```
 
 The following things happen:
 1. Now, first we are asked for the length of input, and then our input is converted to integer.
