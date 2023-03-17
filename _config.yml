@@ -166,12 +166,6 @@ kramdown:
   enable_coderay: false
 
 
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
-
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
@@ -180,7 +174,8 @@ timezone: 'Asia/Kolkata' # http://en.wikipedia.org/wiki/List_of_tz_database_time
 
 
 ## Plugins
-#gems:
+plugins:
+  - jekyll-include-cache
 #  - jekyll-archives
 #  - jekyll-paginate
 #  - jekyll-sitemap
