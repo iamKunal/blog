@@ -20,21 +20,21 @@ is the binary and here is the source code. Use nc 52.7.95.224 8040 to connect to
 ```
 
 Inspecting the source we have a function to get the flag:
-{% highlight c%}
+```c
 void getFlag()
 {
 	system("/bin/cat flag.txt\n");
 }
-{% endhighlight %}
+```
 But we don't have any calls to it.
 Since all buffers and operations have fixed size thus, no buffer-overflow.
 
 We notice at `line 62` that there's a `printf(buf)` (with a more-than-sufficient size of 256). So we can write at any address exploiting this format string vulnerability. Trying the string `aaaa%X.%X.%X.%X.%X.%X.%X.%X.%X.%X.%X...` We see that that our input can be found at the 7th position (Notice the toggled case of 'aaaa').
 
 I fired up gdb and checked `printf()`'s [disassembly](/assets/write-ups/securitymoocctf/doge.asm). Observe that it reads a jump using a value as an address from Data Segment (GOT):
-{% highlight nasm%}
+```nasm
 0x8048580 <printf@plt>:	jmp    DWORD PTR ds:0x804b010
-{% endhighlight %}
+```
 
 So I chose the location `0x804b010`.
 I got `getFlag()`'s address using `nm doge | grep getFlag` which gives `0x0804878b` as the value to write.
